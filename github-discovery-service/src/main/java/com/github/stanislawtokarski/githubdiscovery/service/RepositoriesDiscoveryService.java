@@ -1,8 +1,8 @@
 package com.github.stanislawtokarski.githubdiscovery.service;
 
+import com.github.stanislawtokarski.githubdiscovery.model.RepositoryDetails;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.bitbucket.stanislawtokarski.githubdiscovery.model.RepositoryDetails;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;

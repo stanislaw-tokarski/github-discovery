@@ -1,7 +1,7 @@
 package com.github.stanislawtokarski.githubdiscovery.tests.rest;
 
-import org.bitbucket.stanislawtokarski.githubdiscovery.tests.config.GithubDiscoveryContext;
-import org.bitbucket.stanislawtokarski.githubdiscovery.tests.config.GithubDiscoveryContextAsParameterExtension;
+import com.github.stanislawtokarski.githubdiscovery.tests.config.GithubDiscoveryContext;
+import com.github.stanislawtokarski.githubdiscovery.tests.config.GithubDiscoveryContextAsParameterExtension;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 

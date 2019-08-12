@@ -1,7 +1,6 @@
 package com.github.stanislawtokarski.githubdiscovery.configuration;
 
 import com.github.stanislawtokarski.githubdiscovery.service.RestTemplateExceptionHandler;
-import org.bitbucket.stanislawtokarski.githubdiscovery.service.RestTemplateExceptionHandler;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.context.annotation.Bean;

@@ -4,8 +4,6 @@ import com.github.stanislawtokarski.githubdiscovery.model.RepositoryDetails;
 import com.github.stanislawtokarski.githubdiscovery.service.RepositoriesDiscoveryService;
 import com.google.common.base.Stopwatch;
 import lombok.extern.slf4j.Slf4j;
-import org.bitbucket.stanislawtokarski.githubdiscovery.model.RepositoryDetails;
-import org.bitbucket.stanislawtokarski.githubdiscovery.service.RepositoriesDiscoveryService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

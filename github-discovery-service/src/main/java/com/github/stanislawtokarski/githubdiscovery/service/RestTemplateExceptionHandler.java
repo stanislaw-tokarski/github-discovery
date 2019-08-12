@@ -1,7 +1,7 @@
 package com.github.stanislawtokarski.githubdiscovery.service;
 
+import com.github.stanislawtokarski.githubdiscovery.exception.GithubApiException;
 import lombok.extern.slf4j.Slf4j;
-import org.bitbucket.stanislawtokarski.githubdiscovery.exception.GithubApiException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.client.ClientHttpResponse;
 import org.springframework.stereotype.Component;

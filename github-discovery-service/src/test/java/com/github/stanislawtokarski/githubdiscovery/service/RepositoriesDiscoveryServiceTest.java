@@ -1,9 +1,8 @@
 package com.github.stanislawtokarski.githubdiscovery.service;
 
-import com.github.stanislawtokarski.githubdiscovery.model.RepositoryDetails;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.bitbucket.stanislawtokarski.githubdiscovery.model.RepositoryDetails;
+import com.github.stanislawtokarski.githubdiscovery.model.RepositoryDetails;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

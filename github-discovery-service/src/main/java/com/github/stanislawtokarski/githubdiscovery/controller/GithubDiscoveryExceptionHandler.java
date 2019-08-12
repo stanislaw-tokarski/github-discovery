@@ -1,10 +1,9 @@
 package com.github.stanislawtokarski.githubdiscovery.controller;
 
+import com.github.stanislawtokarski.githubdiscovery.exception.GithubApiException;
+import com.github.stanislawtokarski.githubdiscovery.exception.InternalServerErrorException;
 import com.github.stanislawtokarski.githubdiscovery.model.ErrorResponse;
 import lombok.extern.slf4j.Slf4j;
-import org.bitbucket.stanislawtokarski.githubdiscovery.exception.GithubApiException;
-import org.bitbucket.stanislawtokarski.githubdiscovery.exception.InternalServerErrorException;
-import org.bitbucket.stanislawtokarski.githubdiscovery.model.ErrorResponse;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
