@@ -105,7 +105,7 @@ class RepositoriesControllerTest {
         final int errorCode = 404;
 
         given(discoveryService.fetchRepositoryDetails(anyString(), anyString(), nullable(String.class)))
-                .willAnswer(invocation -> {
+                .willAnswer(ignore -> {
                     throw new GithubApiException(errorCode);
                 });
         when(githubDiscoveryExceptionHandler.handleGithubApiException(any()))
@@ -126,7 +126,7 @@ class RepositoriesControllerTest {
         final int errorCode = 504;
 
         given(discoveryService.fetchRepositoryDetails(anyString(), anyString(), nullable(String.class)))
-                .willAnswer(invocation -> {
+                .willAnswer(ignore -> {
                     throw new SocketTimeoutException();
                 });
         when(githubDiscoveryExceptionHandler.handleSocketTimeout())

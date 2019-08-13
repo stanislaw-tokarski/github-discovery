@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 
 import static io.restassured.RestAssured.given;
+import static org.apache.http.HttpHeaders.ACCEPT;
 import static org.apache.http.HttpHeaders.AUTHORIZATION;
 import static org.apache.http.HttpStatus.SC_OK;
 import static org.hamcrest.Matchers.is;
@@ -13,7 +14,7 @@ import static org.hamcrest.Matchers.is;
 @ExtendWith(GithubDiscoveryContextAsParameterExtension.class)
 class GithubDiscoverySunnyDaysScenariosIT {
 
-    private static final String HEADER_ACCEPT_VALUE = "application/vnd.github.v3+json";
+    private static final String APPLICATION_VND_GITHUB_V3_JSON = "application/vnd.github.v3+json";
 
     @Test
     void shouldFetchRepositoryDetailsWithoutAuthentication(GithubDiscoveryContext context){
@@ -21,6 +22,7 @@ class GithubDiscoverySunnyDaysScenariosIT {
         final String query = "/repositories/stanislaw-tokarski/globee";
 
         given()
+                .header(ACCEPT, APPLICATION_VND_GITHUB_V3_JSON)
         .when()
                 .get(context.getGithubDiscoveryServiceUrl() + query)
         .then()
@@ -38,6 +40,7 @@ class GithubDiscoverySunnyDaysScenariosIT {
         final String query = "/repositories/stanislaw-tokarski/evacuate.us";
 
         given()
+                .header(ACCEPT, APPLICATION_VND_GITHUB_V3_JSON)
                 .header(AUTHORIZATION, context.getOAuthToken())
         .when()
                 .get(context.getGithubDiscoveryServiceUrl() + query)

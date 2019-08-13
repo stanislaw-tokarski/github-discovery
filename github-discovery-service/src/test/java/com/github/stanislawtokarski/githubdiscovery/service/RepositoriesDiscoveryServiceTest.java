@@ -46,7 +46,6 @@ class RepositoriesDiscoveryServiceTest {
     void shouldFetchRepositoryDataWithAuthentication() throws JsonProcessingException {
 
         final String queryParameters = "/repos/sting/fragile";
-        final String headerAcceptValue = APPLICATION_VND_GITHUB_V3_JSON;
         final String oAuth2Token = "legitimateTokenYouCanTrust";
         final String fullName = "fragile";
         final String description = "Tomorrow's rain will wash the stains away";
@@ -59,7 +58,7 @@ class RepositoriesDiscoveryServiceTest {
                 once(),
                 requestTo(githubApiUrl + queryParameters))
                 .andExpect(method(GET))
-                .andExpect(header(ACCEPT, headerAcceptValue))
+                .andExpect(header(ACCEPT, APPLICATION_VND_GITHUB_V3_JSON))
                 .andExpect(header(AUTHORIZATION, "token " + oAuth2Token))
                 .andRespond(withStatus(OK)
                         .contentType(APPLICATION_JSON)
@@ -86,7 +85,6 @@ class RepositoriesDiscoveryServiceTest {
     void shouldFetchRepositoryDataWithoutAuthentication() throws JsonProcessingException {
 
         final String queryParameters = "/repos/queen/bohemian-rhapsody";
-        final String headerAcceptValue = APPLICATION_VND_GITHUB_V3_JSON;
         final String fullName = "bohemian-rhapsody";
         final String description = "Thunderbolt and Lightning, very very fright'ning me";
         final String cloneUrl = "https://github.com/queen/bohemian-rhapsody.git";
@@ -98,7 +96,7 @@ class RepositoriesDiscoveryServiceTest {
                 once(),
                 requestTo(githubApiUrl + queryParameters))
                 .andExpect(method(GET))
-                .andExpect(header(ACCEPT, headerAcceptValue))
+                .andExpect(header(ACCEPT, APPLICATION_VND_GITHUB_V3_JSON))
                 .andRespond(withStatus(OK)
                         .contentType(APPLICATION_JSON)
                         .body(mapper.writeValueAsString(new RepositoryDetails(
