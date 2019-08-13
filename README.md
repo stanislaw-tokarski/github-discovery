@@ -8,11 +8,13 @@ Consumes GET requests with owner of a repository and repository name in a path. 
 Produces JSON with repository details, for example:
 
 ```json
+{
 	"fullName": "stanislaw-tokarski/evacuate.us",
 	"description": "Crowd modeling with artificial intelligence algorithms and agent programming",
 	"cloneUrl": "https://github.com/stanislaw-tokarski/evacuate.us.git",
 	"stars": "0",
 	"createdAt": "2018-10-17T11:23:48Z"
+}
 ```
 
 ## Getting application up and running
